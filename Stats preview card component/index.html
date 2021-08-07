@@ -5,157 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!--- Very dark blue (main background): hsl(233, 47%, 7%)
-- Dark desaturated blue (card background): hsl(244, 38%, 16%)
-- Soft violet (accent): hsl(277, 64%, 61%)
-
-### Neutral
-
-- White (main heading, stats): hsl(0, 0%, 100%)
-- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
-- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)-->
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-size: 15px;
-}
-body{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background:hsl(233, 47%, 7%) ;
-  font-size: 15px;
-}
-section{
-  position: relative;
- width: 1110px;
- background: hsl(244, 38%, 16%);
- border-radius: 10px;
- display: flex;
-}
-.content{
-  position: relative;
-  width: 570px;
-  padding: 80px 90px 80px 60px;
-}
-.content h2{
-  font-size: 2.2em;
-  font-family: 'Inter', sans-serif;
-  color: hsl(0, 0%, 100%);
-}
-.content h2 span{
-  font-size: 1em;
-  color: hsl(277, 64%, 61%);
-}
-.content p{
-  font-size: 0.8em;
-color: hsla(0, 0%, 100%, 0.75) ;
-line-height: 1.8em;
-margin: 30px 0;
-letter-spacing: 2px;
-font-family: 'Lexend Deca', sans-serif;
-}
-.image{
-position: relative;
-width: 540px;
-background: url(images/image-header-desktop.jpg) center no-repeat;
-background-size: cover;
-}
-.image::after{
-  content: '';
-  position: absolute;
-  width: 100%;height: 100%;
-  background:hsl(277, 64%, 61%);
-  opacity: .5;
-}
-.stats{
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
-}
-.box{
-  margin-right: 50px;
-}
-.box h3{
-  font-size: 1.5em;
-  color: hsl(0, 0%, 100%);
-  font-family: 'Inter', sans-serif;
-}
-.box p{
-  text-transform: uppercase;
-  color: hsla(0, 0%, 100%, 0.6);
-  font-size: 0.8em;
-  margin: 0;
-}
-
-.attribution { position: absolute; bottom: 30px; color: #fff; font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-@media(max-width:376px){
-  body{
-    position: relative;
-    padding: 20px;
-  }
-  section{
- width: 100%;
- flex-direction: column-reverse;
- margin: 50px 0;
-}
-.content{
-  width: 100%;
-  padding: 20px;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 10px;
-  padding: 10px;
-}
-.content h2 {
-  font-size:1.6em ;
-}
-.content p{
-  margin: 20px 0px;
-  font-size: 0.6em;
-}
-.stats{
-  margin-top: 0px;
-  flex-direction: column;
-}
-.stats h3{
-  font-size: 1.3em;
-}
-.box p{
-  margin: 3px 0 0;
-  font-size: 0.6em;
-}
-.box{
-  margin: 10px 0;
-}
-.image{
-width: 100%;
-height: 200px;
-background: url(images/image-header-mobile.jpg) center no-repeat;
-background-size: cover;
-}
-.attribution {bottom: 10px;}
-}
-
-
-
-  </style>
 </head>
 <body>
-
   <section>
     <div class="content">
       <h2>Get <span>insights</span> that help your business grow.</h2>
@@ -169,15 +22,6 @@ background-size: cover;
     </div>
     <div class="image"></div>
   </section>
-
- 
-
-
-
- 
-
- 
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/erik-vm">Erik-VM</a>.
