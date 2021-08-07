@@ -28,7 +28,7 @@ section{
 }
 .contnet{
   position: relative;
-  width: 40%;
+  width: 43%;
 }
 .contnet h2{
   font-size: 2.8em;
@@ -39,12 +39,9 @@ section{
   line-height: 1.5em;
   margin-top: 10px;
 }
-.contnet p:nth-child(2){
-  display: none;
-}
 .ratings{
   position: relative;
-  width: 60%;
+  width: 57%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -59,7 +56,7 @@ section{
   background: hsl(300, 24%, 96%);
   margin: 10px 0;
   padding: 0px 30px;
-  border-radius: 20px; 
+  border-radius: 10px; 
 }
 .stars img{
   width: 16px;
@@ -95,7 +92,7 @@ section{
   flex-wrap: wrap;
   background: hsl(300, 43%, 22%);
   color: hsl(0, 0%, 100%);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px 40px;
 }
 .testBox:nth-child(1){
@@ -119,6 +116,7 @@ section{
 .name h3:nth-child(2){
   color: hsl(333, 80%, 67%);
   font-weight: 300;
+  margin-top: 5px;
 }
 .testBox p{
   font-size: 0.8em;
@@ -141,15 +139,21 @@ width: 1440px;
 height: 800px;
       }
       .bgtop{
-        top: -20px;left: 70px;
+        top: -100px;
+        left: -770px;
+        background: url(images/bg-pattern-top-desktop.svg) no-repeat;
+        background-size: cover;
       }
       .bgbottom{
         bottom: -100px;
-        right: -300px;
+        right: 00px; 
+        background: url(images/bg-pattern-bottom-desktop.svg) no-repeat;
+        background-size: cover;
       }
       @media(max-width:376px){
         body{
           height: auto;
+          padding: 30px 0;
         }
         section{
   width: 100%;
@@ -160,17 +164,15 @@ flex-direction: column;
 .contnet{
   width: 100%;
   text-align: center;
-  margin: 70px 0;
+  margin: 20px 0 0px;
   padding: 0 10px;
 }
 .contnet h2{
   font-size: 2.1em;
 }
 .contnet p{
-  display: none;
-}
-.contnet p:nth-child(2){
-  display: initial;
+  font-size: 0.9em;
+  padding: 15px;
 }
 .ratings{
   position: relative;
@@ -179,7 +181,74 @@ flex-direction: column;
   flex-direction: column;
   align-items: flex-end;
 }
+.raitingBox{
+  
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+padding: 10px 30px;
+  margin: 10px 0;
+
+}
+.stars img{
+  margin-bottom: 5px;
+}
+.raitingBox h3{
+  font-size: 0.9em;
+  margin-left: 30px;
+  color: hsl(300, 43%, 22%);
+}
+.raitingBox:nth-child(2)
+{
+  margin-right: 0;
+}
+.raitingBox:nth-child(1)
+{
+  margin-right: 0;
+}
 .testemonials{
 flex-direction: column;
 }
+.testBox{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background: hsl(300, 43%, 22%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-top: 20px;
+}
+.testBox:nth-child(1){
+  margin-bottom: 0px;
+}
+.testBox:nth-child(2){
+  margin-bottom: 0px;
+}
+.testBox p{
+  font-size: 0.88em
+}
+.attribution {
+  bottom: 10px;
+}
+.bgtop, .bgbottom{
+  position: absolute;
+  width: 1440px;
+  height: 800px;
+        }
+        .bgtop{
+          top: 0px;
+          left: 0px;
+          background: url(images/bg-pattern-top-mobile.svg) no-repeat;
+        }
+        .bgbottom{
+          bottom: 0px;
+          right: 0px;
+          background: url(images/bg-pattern-bottom-mobile.svg) no-repeat;
+        }
       }
