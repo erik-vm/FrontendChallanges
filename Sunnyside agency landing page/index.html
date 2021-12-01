@@ -9,7 +9,7 @@
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 </head>
 <body>
-  <nav>
+  <nav class="nav">
     <div class="logo"><img src="images/logo.svg" alt=""></div>
     <ul>
       <li><a href="#">About</a></li>
@@ -17,6 +17,7 @@
       <li><a href="#">Projects</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
+    <div class="toggle" onclick="toggle()"></div>
   </nav>
   <section class="banner">
     <h1>We are creatives</h1>
@@ -28,16 +29,15 @@
       <h2>Transform your brand</h2>
       <p>We are a full-service creative agency specializing in helping brands grow fast. 
         Engage your clients through compelling visuals that do most of the marketing for you.</p>
-        <a href="#">Learn more</a>
-        <div class="yellow-btnbg"></div>
+        <a href="#">Learn more <div class="yellow-btnbg"></div></a>   
     </div>
     <div class="box egg"></div>
     <div class="box glass"></div>
     <div class="box standout">
       <h2>Stand out to the right audience</h2>
       <p> Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
-        <a href="#">Learn more</a>
-        <div class="pink-btnbg"></div>
+        <a href="#">Learn more <div class="pink-btnbg"></div></a>
+       
     </div>
     <div class="box graphic">
       <h3>Graphic design</h3>
@@ -91,25 +91,18 @@
       <li><a href="#"><img src="images/icon-twitter.svg" alt=""></a></li>
       <li><a href="#"><img src="images/icon-pinterest.svg" alt=""></a></li>
     </ul>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </footer>
-  
-
-
-  
-  
-
-
-  
-
-
-  
-  
-  
-  Contact
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script>
+    function toggle(){
+        const toggleButton = document.querySelector('.toggle');
+        toggleButton.classList.toggle('active')
+        const toggleNav = document.querySelector('.nav');
+        toggleNav.classList.toggle('active')
+    }
+</script>
 </body>
 </html>

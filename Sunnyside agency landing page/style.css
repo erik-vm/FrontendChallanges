@@ -21,7 +21,7 @@ body{
 h1, h2, h3, h4, strong{
     font-family: 'Fraunces', serif;
 }
-nav{
+.nav{
     position: absolute;
     top: 0;
     left: 0;
@@ -32,21 +32,21 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-nav ul{
+.nav ul{
     display: flex;
     align-items: center;
 }
-nav ul li{
+.nav ul li{
     list-style: none;
 }
-nav ul li a{  
+.nav ul li a{  
     display: inline-block;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.75);
     margin-left: 40px;
     font-size: 0.9em;
 }
-nav ul li:last-child a{
+.nav ul li:last-child a{
     background: #fff;
     color: #333;
     padding: 12px 20px;
@@ -56,9 +56,16 @@ nav ul li:last-child a{
     font-size: 0.6em;
     transition: .3s;
 }
-nav ul li:last-child a:hover{
+.nav ul li:last-child a:hover{
     background: rgba(255, 255, 255, 0.3);
     color: #fff;
+}
+.nav .toggle{
+    width: 25px;
+    height: 25px;
+    background: url(images/icon-hamburger.svg) center no-repeat;
+    background-size: cover;
+    display: none;
 }
 .banner{
     position: relative;
@@ -116,7 +123,7 @@ nav ul li:last-child a:hover{
     font-weight: 900;
     color:  hsl(212, 27%, 19%);    
 }
-.box.transform .yellow-btnbg{
+.box.transform a .yellow-btnbg{
     position: relative;
     height: 10px;
     width: 135px;
@@ -127,7 +134,7 @@ nav ul li:last-child a:hover{
     opacity: .5;
     transition: .3s;
 }
-.box.standout .pink-btnbg{
+.box.standout a .pink-btnbg{
     position: relative;
     height: 10px;
     width: 135px;
@@ -138,7 +145,9 @@ nav ul li:last-child a:hover{
     opacity: .5;
     transition: .3s;
 }
-.box.transform a:hover + .box.transform .yellow-btnbg:hover{
+
+.box.transform a:hover .yellow-btnbg,
+.box.standout a:hover .pink-btnbg {
     opacity: 1;
 }
 
@@ -266,7 +275,7 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 50px;
-    background: hsl(168, 34%, 41%) ;
+    background: #74BEAF ;
 }
 .footerlogo{
     filter:  invert(80%) sepia(51%) saturate(494%) hue-rotate(116deg) brightness(88%) contrast(87%);
@@ -274,14 +283,180 @@ footer{
 footer ul{
     position: relative;
     display: flex;
-    margin: 10px;
+    margin: 30px 0 40px;
 }
 footer ul li{
     list-style: none;
 }
 footer ul li a{
-    color: #fff;
+    color: #266457;
     text-decoration: none;
-text-transform: uppercase;
-color: #48484a;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin: 20px;
+    transition: 500ms;
+}
+footer ul li a:hover{
+    color: #fff;
+}
+.social li a{
+    margin: 0px 10px;
+}
+.social li a img{
+    transition: 500ms;
+}
+.social li a img:hover{
+    filter: brightness(0%) invert(1) ;
+}
+@media (max-width:375px) {
+    .nav{
+        padding: 25px 20px;
+        flex-wrap: wrap;
+    }
+    .nav.active ul{
+        order: 3;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 50px;
+        height: 300px;
+        background: #fff;
+    }
+    .nav ul li a{
+        display: none;
+    }
+    .nav.active ul li a{
+        color: hsl(232, 10%, 55%);
+        margin-left: 0px;
+        font-size: 1.1em;
+        display: initial;
+    }
+    .nav ul li:last-child a{
+        display: none;
+    }
+    .nav.active ul li:last-child a{
+        background: hsl(51, 100%, 49%);
+        color: hsl(212, 27%, 19%);
+        padding: 2px 20px;
+        border-radius: 20px;
+        font-size: 1em;
+        display: initial;
+    }
+    .nav ul li:last-child a:hover{
+        background: rgba(255, 255, 255, 0.3);
+        color: #fff;
+       
+    }
+    .nav .toggle{
+        width: 25px;
+        height: 25px;
+        background: url(images/icon-hamburger.svg) center no-repeat;
+        background-size: cover;
+        display: initial;
+    }
+    .banner{
+        height: 600px;
+        background: url(images/mobile/image-header.jpg) center no-repeat;
+        background-size: cover;
+        text-align: center;
+    }
+    .banner h1{
+        font-size: 2.3em;
+        margin: 150px 0 50px;
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .box{
+    
+        position: relative;
+        height: 400px;
+}
+.box.transform,
+.box.standout{
+    padding: 25px;
+text-align: center;
+}
+.box.transform{
+    order: 2;
+}
+.box.standout{
+    order: 4;
+}
+.box.transform a .yellow-btnbg,
+.box.standout a .pink-btnbg{
+    margin: -8px auto -2px;
+}
+.box.transform h2,
+.box.standout h2{
+    font-size: 1.8em;
+    padding-right: 0px;
+    margin: 20px 0px;
+    color:  hsl(212, 27%, 19%);
+}
+.box.egg{
+    background: url(images/mobile/image-transform.jpg) center no-repeat;
+    background-size: cover;
+    order: 1;
+}
+.box.glass{
+    background: url(images/mobile/image-stand-out.jpg) center no-repeat;
+    background-size: cover;
+    order: 3;
+}
+.box.graphic{
+    background: url(images/mobile/image-graphic-design.jpg) center no-repeat;
+    background-size: cover;
+    order: 5;
+}
+.box.photo{
+    background: url(images/mobile/image-photography.jpg) center no-repeat;
+    background-size: cover;
+    order: 6;
+}
+.box.graphic, .box.photo{
+   height: 600px;
+    padding: 360px 20px 40px;  
+}
+.test{
+    padding: 50px 10px;
+    flex-wrap: wrap;
+}
+.costumers{
+    width: 100%;
+    flex-direction: column;
+    margin-top:20px;
+}
+.testbox{
+    margin: 0px;
+    width: 100%;
+    padding: 30px;
+}
+.testbox p{
+    margin: 30px 0 20px;
+}
+.pics{
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+}
+.pics .caps{
+    background: url(images/mobile/image-gallery-milkbottles.jpg) center no-repeat;
+    background-size: cover;
+}
+.pics .plate{
+    background: url(images/mobile/image-gallery-orange.jpg) center no-repeat;
+    background-size: cover;
+}
+.pics .cone{
+    background: url(images/mobile/image-gallery-cone.jpg) center no-repeat;
+    background-size: cover;
+}
+.pics .sugar{
+    background: url(images/mobile/image-gallery-sugar-cubes.jpg) center no-repeat;
+    background-size: cover;
+}
 }
